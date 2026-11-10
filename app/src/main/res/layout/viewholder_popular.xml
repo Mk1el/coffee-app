@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="175dp"
+    android:layout_height="260dp"
+    android:layout_marginEnd="16dp">
+
+    <!-- 1. Card Background with Rounded Gradient -->
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:background="@drawable/brown_gradient_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 2. Coffee Cup Image (Floats over the top of the card for 3D depth) -->
+    <ImageView
+        android:id="@+id/pic"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <!-- 3. Coffee Title -->
+    <TextView
+        android:id="@+id/titleTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="14dp"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Coffee Title"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/pic" />
+
+    <!-- 4. Subtitle / Extra Info -->
+    <TextView
+        android:id="@+id/subtitleTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="14dp"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="With Oat Milk"
+        android:textColor="#BCAAA4"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/titleTxt" />
+
+    <!-- 5. Price Tag -->
+    <TextView
+        android:id="@+id/priceTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginBottom="16dp"
+        android:text="$-"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view" />
+
+    <!-- 6. Plus / Add to Cart Icon Button -->
+    <ImageView
+        android:id="@+id/btnPlus"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/brown_full_corner_bg"
+        android:padding="6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:srcCompat="@drawable/plus" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
